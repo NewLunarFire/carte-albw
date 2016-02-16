@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Carte Debug A Link Between Worlds</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<p>
+			<input type="text" id="coord" size="40" value="" readOnly="true"/>
+			<input type="button" id="bouton-carte" value="Carte de Lorule" onclick="modeleCarte.changerCarte()" />
+			<span id="statutCurseur">Curseur libre</span><br/><br/>
+			Sélectionnez une partie de la carte à zommer en cliquant dessus, puis cliquez à l'intérieur de la zone pour geler le curseur.<br/>
+			Quand le curseur est gelé, les coordonées sont sélectionnés.<br/>
+			Faites CTRL+C pour les copier dans votre presse-papier, puis cliquez à nouveau pour dégeler le curseur.
+		</p>
+		<canvas id="carte_albw" width="1000" height="1000" onmousemove="controleurSouris.EvenDeplacement(event)" onclick="controleurSouris.EvenClic(event)">
+			Votre navigateur ne supporte pas les canevas. Mettez-le à jour à une version plus récente.
+		</canvas>
+	</body>
+</html>

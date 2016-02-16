@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Carte de A Link Between Worlds</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="vueGlobale.js"></script>
+		<script type="text/javascript" src="vueFond.js"></script>
+		<script type="text/javascript" src="vueCarte.js"></script>
+		<script type="text/javascript" src="alt/vueListeObjets.js"></script>
+		<script type="text/javascript" src="vueSwitcher.js"></script>
+		<script type="text/javascript" src="vueDescriptif.js"></script>
+		<script type="text/javascript" src="modeleCarte.js"></script>
+		<script type="text/javascript" src="modeleDescriptif.js"></script>
+		<script type="text/javascript" src="modeleGlobal.js"></script>
+		<script type="text/javascript" src="alt/modeleObjets.js"></script>
+		<script type="text/javascript" src="controleurClavier.js"></script>
+		<script type="text/javascript" src="controleurSouris.js"></script>
+		<script type="text/javascript" src="cookies.js"></script>
+		<script type="text/javascript" src="alt/data.js"></script>
+		<script>
+			var canvas; //Canvas
+			var context; //Contexte
+			
+			//Point d'entrée
+			window.onload = function() {
+				//Récupères le canvas
+				canvas = document.getElementById('carte_albw');
+				if(!canvas)
+				{
+					alert("Impossible de récupérer le canvas");
+					return;
+				}
+	
+				//Récupère le contexte
+				context = canvas.getContext('2d');
+				if(!context)
+				{
+					alert("Impossible de récupérer le contexte");
+					return;
+				}
+				
+				//Charge les images
+				cacheImages.retour = modeleGlobal.initialiser;
+				cacheImages.chargerImages();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="carte_albw" width="1920" height="1080">
+			Votre navigateur ne supporte pas les canevas. Mettez-le à jour à une version plus récente.
+		</canvas>
+	</body>
+</html>
